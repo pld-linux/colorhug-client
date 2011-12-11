@@ -1,12 +1,12 @@
 Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
-Version:	0.1.1
+Version:	0.1.2
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	9514ae90cbf564d11150f957e09d7f09
+# Source0-md5:	9e5c3174e5820edca23a864d2194019d
 URL:		http://hughski.com/
 BuildRequires:	colord-devel >= 0.1.15
 BuildRequires:	glib2-devel >= 1:2.28.0
@@ -63,6 +63,18 @@ mający otwarte źródła, służący do kalibrowania ekranów.
 Ten pakiet zawiera graficzne narzędzia klienckia pozwalające
 operować sensorem.
 
+%package -n bash-completion-colorhug
+Summary:	Bash completion support for ColorHug console commands
+Summary(pl.UTF-8):	Bashowe uzupełnianie składni dla poleceń terminalowych ColorHuga
+Group:		Applications/Shells
+Requires:	bash-completion
+
+%description -n bash-completion-colorhug
+Bash completion support for ColorHug console commands.
+
+%description -n bash-completion-colorhug -l pl.UTF-8
+Bashowe uzupełnianie składni dla poleceń terminalowych ColorHuga.
+
 %prep
 %setup -q
 
@@ -101,3 +113,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/*/apps/colorhug.png
 %{_iconsdir}/hicolor/scalable/apps/colorhug.svg
 %{_mandir}/man1/colorhug-flash.1*
+
+%files -n bash-completion-colorhug
+%defattr(644,root,root,755)
+/etc/bash_completion.d/colorhug-completion.bash
