@@ -89,6 +89,14 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+mv $RPM_BUILD_ROOT%{_datadir}/locale/{de_DE,de}
+mv $RPM_BUILD_ROOT%{_datadir}/locale/{es_ES,es}
+mv $RPM_BUILD_ROOT%{_datadir}/locale/{fr_FR,fr}
+mv $RPM_BUILD_ROOT%{_datadir}/locale/{it_IT,it}
+mv $RPM_BUILD_ROOT%{_datadir}/locale/{nl_NL,nl}
+# empty version of pl which already exists
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/pl_PL
+
 %find_lang %{name}
 
 %clean
