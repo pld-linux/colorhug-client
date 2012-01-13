@@ -1,12 +1,12 @@
 Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
-Version:	0.1.3
+Version:	0.1.4
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	de5accc39d2d1f3fc02eae4e34c585bc
+# Source0-md5:	a48ca8e1389ac22c33a17c9eb81c64eb
 URL:		http://hughski.com/
 BuildRequires:	colord-devel >= 0.1.15
 BuildRequires:	glib2-devel >= 1:2.28.0
@@ -89,14 +89,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-# empty for now
-#find_lang %{name}
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
-# -f %{name}.lang
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README
 %attr(755,root,root) %{_bindir}/colorhug
@@ -113,6 +111,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/*/apps/colorhug.png
 %{_iconsdir}/hicolor/scalable/apps/colorhug.svg
 %{_mandir}/man1/colorhug-flash.1*
+%{_mandir}/man1/colorhug-ccmx.1*
 
 %files -n bash-completion-colorhug
 %defattr(644,root,root,755)
