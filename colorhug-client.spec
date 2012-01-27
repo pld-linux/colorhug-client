@@ -1,12 +1,12 @@
 Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
-Version:	0.1.4
+Version:	0.1.5
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	a48ca8e1389ac22c33a17c9eb81c64eb
+# Source0-md5:	9f648cb55c498cdb04008e376586a858
 URL:		http://hughski.com/
 BuildRequires:	colord-devel >= 0.1.15
 BuildRequires:	glib2-devel >= 1:2.28.0
@@ -94,6 +94,7 @@ mv $RPM_BUILD_ROOT%{_datadir}/locale/{es_ES,es}
 mv $RPM_BUILD_ROOT%{_datadir}/locale/{fr_FR,fr}
 mv $RPM_BUILD_ROOT%{_datadir}/locale/{it_IT,it}
 mv $RPM_BUILD_ROOT%{_datadir}/locale/{nl_NL,nl}
+mv $RPM_BUILD_ROOT%{_datadir}/locale/{pt_PT,pt}
 # empty version of pl which already exists
 %{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/pl_PL
 
@@ -118,6 +119,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/colorhug-flash.desktop
 %{_iconsdir}/hicolor/*/apps/colorhug.png
 %{_iconsdir}/hicolor/scalable/apps/colorhug.svg
+%{_iconsdir}/hicolor/*/mimetypes/application-x-ccmx.png
+%{_iconsdir}/hicolor/scalable/mimetypes/application-x-ccmx.svg
 %{_mandir}/man1/colorhug-flash.1*
 %{_mandir}/man1/colorhug-ccmx.1*
 
