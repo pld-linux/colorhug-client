@@ -1,12 +1,12 @@
 Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
-Version:	0.1.7
+Version:	0.1.8
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	d93690beaa433ab34b3d36517085f2cd
+# Source0-md5:	80c827a36604d44c151d0668370c48e3
 URL:		http://hughski.com/
 BuildRequires:	colord-devel >= 0.1.15
 BuildRequires:	glib2-devel >= 1:2.28.0
@@ -15,6 +15,7 @@ BuildRequires:	gobject-introspection-devel >= 0.9.8
 BuildRequires:	gtk+3-devel >= 3.0.0
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	lcms2-devel
+BuildRequires:	libcanberra-gtk3-devel >= 0.10
 BuildRequires:	libgusb-devel >= 0.1.2
 BuildRequires:	libsoup-devel >= 2.4
 BuildRequires:	pkgconfig
@@ -51,6 +52,7 @@ Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 Requires:	colord >= 0.1.15
 Requires:	gtk+3 >= 3.0.0
+Requires:	libcanberra-gtk3 >= 0.10
 
 %description gui
 The Hughski ColorHug colorimeter is a low cost open-source hardware
