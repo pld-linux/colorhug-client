@@ -1,14 +1,14 @@
 Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
-Version:	0.1.8
+Version:	0.1.9
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	80c827a36604d44c151d0668370c48e3
+# Source0-md5:	40dea7aa3d535f110eeb7f8ab1d7ad9f
 URL:		http://hughski.com/
-BuildRequires:	colord-devel >= 0.1.15
+BuildRequires:	colord-devel >= 0.1.20
 BuildRequires:	glib2-devel >= 1:2.28.0
 BuildRequires:	gettext-devel >= 0.17
 BuildRequires:	gobject-introspection-devel >= 0.9.8
@@ -50,7 +50,7 @@ Summary:	GUI tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Graficzne narzędzia do kolorymetrów Hughski
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
-Requires:	colord >= 0.1.15
+Requires:	colord >= 0.1.20
 Requires:	gtk+3 >= 3.0.0
 Requires:	libcanberra-gtk3 >= 0.10
 
@@ -155,14 +155,15 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README
 %attr(755,root,root) %{_bindir}/colorhug
+%attr(755,root,root) %{_bindir}/colorhug-cmd
 %attr(755,root,root) %{_bindir}/colorhug-inhx32-to-bin
 %{_datadir}/glib-2.0/schemas/com.hughski.colorhug-client.gschema.xml
+%{_mandir}/man1/colorhug-cmd.1*
 
 %files gui
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/colorhug-ccmx
 %attr(755,root,root) %{_bindir}/colorhug-flash
-%attr(755,root,root) %{_bindir}/colorhug-gui
 %{_datadir}/colorhug-client
 %{_desktopdir}/colorhug-ccmx.desktop
 %{_desktopdir}/colorhug-flash.desktop
@@ -193,4 +194,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n bash-completion-colorhug
 %defattr(644,root,root,755)
-/etc/bash_completion.d/colorhug-completion.bash
+/etc/bash_completion.d/colorhug-cmd-completion.bash
