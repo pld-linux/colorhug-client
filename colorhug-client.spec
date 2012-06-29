@@ -2,15 +2,15 @@ Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
 Version:	0.1.10
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
 # Source0-md5:	ec1914a8cd5754e17093c1973158e345
 URL:		http://hughski.com/
 BuildRequires:	colord-devel >= 0.1.20
-BuildRequires:	glib2-devel >= 1:2.28.0
 BuildRequires:	gettext-devel >= 0.17
+BuildRequires:	glib2-devel >= 1:2.28.0
 BuildRequires:	gobject-introspection-devel >= 0.9.8
 BuildRequires:	gtk+3-devel >= 3.0.0
 BuildRequires:	intltool >= 0.35.0
@@ -65,8 +65,8 @@ access the sensor.
 Hughski ColorHug to niskobudżetowy kolorymetr z sensorem sprzętowym,
 mający otwarte źródła, służący do kalibrowania ekranów.
 
-Ten pakiet zawiera graficzne narzędzia klienckia pozwalające
-operować sensorem.
+Ten pakiet zawiera graficzne narzędzia klienckia pozwalające operować
+sensorem.
 
 %package libs
 Summary:	Library for Hughski Colorimeter
@@ -129,17 +129,19 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-mv $RPM_BUILD_ROOT%{_datadir}/locale/{cs_CZ,cs}
-mv $RPM_BUILD_ROOT%{_datadir}/locale/{de_DE,de}
-mv $RPM_BUILD_ROOT%{_datadir}/locale/{el_GR,el}
-mv $RPM_BUILD_ROOT%{_datadir}/locale/{es_ES,es}
-mv $RPM_BUILD_ROOT%{_datadir}/locale/{fr_FR,fr}
-mv $RPM_BUILD_ROOT%{_datadir}/locale/{it_IT,it}
-mv $RPM_BUILD_ROOT%{_datadir}/locale/{ja_JP,ja}
-mv $RPM_BUILD_ROOT%{_datadir}/locale/{nl_NL,nl}
-mv $RPM_BUILD_ROOT%{_datadir}/locale/{pt_PT,pt}
+# remove empty de locale
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/de
+mv $RPM_BUILD_ROOT%{_localedir}/{cs_CZ,cs}
+mv $RPM_BUILD_ROOT%{_localedir}/{de_DE,de}
+mv $RPM_BUILD_ROOT%{_localedir}/{el_GR,el}
+mv $RPM_BUILD_ROOT%{_localedir}/{es_ES,es}
+mv $RPM_BUILD_ROOT%{_localedir}/{fr_FR,fr}
+mv $RPM_BUILD_ROOT%{_localedir}/{it_IT,it}
+mv $RPM_BUILD_ROOT%{_localedir}/{ja_JP,ja}
+mv $RPM_BUILD_ROOT%{_localedir}/{nl_NL,nl}
+mv $RPM_BUILD_ROOT%{_localedir}/{pt_PT,pt}
 # empty version of pl which already exists
-%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/pl_PL
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/pl_PL
 # obsoleted by pkg-config
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/libcolorhug.la
 
