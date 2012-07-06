@@ -1,12 +1,12 @@
 Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
-Version:	0.1.10
-Release:	2
+Version:	0.1.11
+Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	ec1914a8cd5754e17093c1973158e345
+# Source0-md5:	af1b29a914d2d3e6f3d78da0b5ffe070
 URL:		http://hughski.com/
 BuildRequires:	colord-devel >= 0.1.20
 BuildRequires:	gettext-devel >= 0.17
