@@ -1,14 +1,15 @@
 Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
-Version:	0.1.11
+Version:	0.1.12
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	af1b29a914d2d3e6f3d78da0b5ffe070
+# Source0-md5:	2ffffe18cbe2deead67e0613b24b7c9a
 URL:		http://hughski.com/
 BuildRequires:	colord-devel >= 0.1.20
+BuildRequires:	colord-gtk-devel >= 0.1.20
 BuildRequires:	gettext-devel >= 0.17
 BuildRequires:	glib2-devel >= 1:2.28.0
 BuildRequires:	gobject-introspection-devel >= 0.9.8
@@ -23,6 +24,7 @@ BuildRequires:	sqlite3-devel
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	%{name}-libs = %{version}-%{release}
+Requires:	colord-libs >= 0.1.20
 Requires:	glib2 >= 1:2.28.0
 Requires:	libgusb >= 0.1.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -50,7 +52,7 @@ Summary:	GUI tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Graficzne narzędzia do kolorymetrów Hughski
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
-Requires:	colord >= 0.1.20
+Requires:	colord-gtk >= 0.1.20
 Requires:	gtk+3 >= 3.0.0
 Requires:	libcanberra-gtk3 >= 0.10
 
