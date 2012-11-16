@@ -2,7 +2,7 @@ Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
 Version:	0.1.13
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
@@ -17,7 +17,7 @@ BuildRequires:	gtk+3-devel >= 3.0.0
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	lcms2-devel
 BuildRequires:	libcanberra-gtk3-devel >= 0.10
-BuildRequires:	libgusb-devel >= 0.1.2
+BuildRequires:	libgusb-devel >= 0.1.4
 BuildRequires:	libsoup-devel >= 2.4
 BuildRequires:	pkgconfig
 BuildRequires:	sqlite3-devel
@@ -26,7 +26,7 @@ BuildRequires:	xz
 Requires:	%{name}-libs = %{version}-%{release}
 Requires:	colord-libs >= 0.1.20
 Requires:	glib2 >= 1:2.28.0
-Requires:	libgusb >= 0.1.2
+Requires:	libgusb >= 0.1.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # why programs are installed to libexecdir in the first place?
