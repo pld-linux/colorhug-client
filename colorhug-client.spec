@@ -1,14 +1,14 @@
 Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
-Version:	0.1.14
+Version:	0.2.0
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	51088d843317c861547d944018ec8a10
+# Source0-md5:	0d9715ab2ea6b0e74f0490625f78d7c7
 URL:		http://hughski.com/
-BuildRequires:	colord-devel >= 0.1.29
+BuildRequires:	colord-devel >= 0.1.31
 BuildRequires:	colord-gtk-devel >= 0.1.24
 BuildRequires:	docbook-utils
 BuildRequires:	gettext-devel >= 0.17
@@ -25,7 +25,7 @@ BuildRequires:	sqlite3-devel
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	%{name}-libs = %{version}-%{release}
-Requires:	colord-libs >= 0.1.29
+Requires:	colord-libs >= 0.1.31
 Requires:	glib2 >= 1:2.31.10
 Requires:	libgusb >= 0.1.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -167,7 +167,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/colorhug-ccmx
 %attr(755,root,root) %{_bindir}/colorhug-flash
 %{_datadir}/colorhug-client
+%{_datadir}/help/C/colorhug-client
 %{_desktopdir}/colorhug-ccmx.desktop
+%{_desktopdir}/colorhug-docs.desktop
 %{_desktopdir}/colorhug-flash.desktop
 %{_iconsdir}/hicolor/*/apps/colorhug*.png
 %{_iconsdir}/hicolor/*/apps/colorimeter-colorhug-inactive.png
