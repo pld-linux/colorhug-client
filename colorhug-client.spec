@@ -24,7 +24,6 @@ BuildRequires:	pkgconfig
 BuildRequires:	sqlite3-devel
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-Requires:	%{name}-libs = %{version}-%{release}
 Requires:	colord-libs >= 0.1.31
 Requires:	glib2 >= 1:2.31.10
 Requires:	libgusb >= 0.1.4
@@ -70,41 +69,6 @@ mający otwarte źródła, służący do kalibrowania ekranów.
 
 Ten pakiet zawiera graficzne narzędzia klienckia pozwalające operować
 sensorem.
-
-%package libs
-Summary:	Library for Hughski Colorimeter
-Summary(pl.UTF-8):	Biblioteka do kolorymetrów Hughski
-Group:		Libraries
-
-%description libs
-Library for Hughski Colorimeter.
-
-%description libs -l pl.UTF-8
-Biblioteka do kolorymetrów Hughski.
-
-%package devel
-Summary:	Header files for ColorHug library
-Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki ColorHug
-Group:		Development/Libraries
-Requires:	%{name}-libs = %{version}-%{release}
-
-%description devel
-Header files for ColorHug library.
-
-%description devel -l pl.UTF-8
-Pliki nagłówkowe biblioteki ColorHug.
-
-%package static
-Summary:	Static ColorHug library
-Summary(pl.UTF-8):	Statyczna biblioteka ColorHug
-Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
-
-%description static
-Static ColorHug library.
-
-%description static -l pl.UTF-8
-Statyczna biblioteka ColorHug.
 
 %package -n bash-completion-colorhug
 Summary:	Bash completion support for ColorHug console commands
