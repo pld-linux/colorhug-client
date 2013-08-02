@@ -174,7 +174,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/*/apps/colorhug*.png
 %{_iconsdir}/hicolor/*/apps/colorimeter-colorhug-inactive.png
 %{_iconsdir}/hicolor/scalable/apps/colorhug.svg
-%{_iconsdir}/hicolor/*/mimetypes/application-x-ccmx.png
+%{_iconsdir}/hicolor/*x*/mimetypes/application-x-ccmx.png*
 %{_iconsdir}/hicolor/scalable/mimetypes/application-x-ccmx.svg
 %{_mandir}/man1/colorhug-flash.1*
 %{_mandir}/man1/colorhug-ccmx.1*
