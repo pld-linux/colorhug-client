@@ -1,12 +1,12 @@
 Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
-Version:	0.2.0
+Version:	0.2.1
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	0d9715ab2ea6b0e74f0490625f78d7c7
+# Source0-md5:	2f54a15b354cd39d8b58572e9899fd88
 URL:		http://hughski.com/
 BuildRequires:	colord-devel >= 0.1.31
 BuildRequires:	colord-gtk-devel >= 0.1.24
@@ -15,7 +15,7 @@ BuildRequires:	gettext-devel >= 0.17
 BuildRequires:	glib2-devel >= 1:2.31.10
 BuildRequires:	gobject-introspection-devel >= 0.9.8
 BuildRequires:	gtk+3-devel >= 3.0.0
-BuildRequires:	intltool >= 0.35.0
+BuildRequires:	intltool >= 0.50.0
 BuildRequires:	lcms2-devel
 BuildRequires:	libcanberra-gtk3-devel >= 0.10
 BuildRequires:	libgusb-devel >= 0.1.4
@@ -131,6 +131,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/colorhug-ccmx
 %attr(755,root,root) %{_bindir}/colorhug-flash
 %{_datadir}/colorhug-client
+%{_datadir}/appdata/colorhug-ccmx.appdata.xml
+%{_datadir}/appdata/colorhug-flash.appdata.xml
 %{_datadir}/help/C/colorhug-client
 %{_desktopdir}/colorhug-ccmx.desktop
 %{_desktopdir}/colorhug-docs.desktop
