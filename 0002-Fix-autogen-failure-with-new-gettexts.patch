@@ -1,0 +1,30 @@
+From 2ea73cad2ddc2f55f2c76d786168f39da1648e21 Mon Sep 17 00:00:00 2001
+From: Richard Hughes <richard@hughsie.com>
+Date: Wed, 8 Jan 2014 17:44:29 +0000
+Subject: [PATCH 02/11] Fix autogen failure with new gettexts
+
+---
+ configure.ac | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 2f8ca5f..f06d7cd 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -54,12 +54,10 @@ AC_SUBST(LT_AGE)
+ dnl ---------------------------------------------------------------------------
+ dnl - gettext stuff
+ dnl ---------------------------------------------------------------------------
+-AM_GNU_GETTEXT_VERSION([0.17])
+-AM_GNU_GETTEXT([external])
+-
+ GETTEXT_PACKAGE=AC_PACKAGE_NAME
+ AC_SUBST(GETTEXT_PACKAGE)
+ AC_DEFINE(GETTEXT_PACKAGE, "AC_PACKAGE_NAME", [foo])
++AM_GLIB_GNU_GETTEXT
+ 
+ dnl ---------------------------------------------------------------------------
+ dnl - Use strict options (default enabled for devs, disabled in releases)
+-- 
+1.8.4.5
+

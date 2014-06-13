@@ -7,6 +7,14 @@ License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
 # Source0-md5:	2f54a15b354cd39d8b58572e9899fd88
+Patch0:		0002-Fix-autogen-failure-with-new-gettexts.patch
+Patch1:		0003-Do-not-use-deprecated-widgets-in-the-spectro-tool.patch
+Patch2:		0004-Load-the-colorhug-spectro-utils-data-file-from-a-GRe.patch
+Patch3:		0005-trivial-Fix-thinko-when-ColorHug-1-and-2-are-connect.patch
+Patch4:		0006-trivial-remove-some-cruft-in-the-configure-file.patch
+Patch5:		0007-Support-getting-and-setting-the-DAC-value-on-hardwar.patch
+Patch6:		0008-trivial-Only-use-the-latest-released-GTK-version.patch
+Patch7:		0009-Rename-ColorHug-Spectro-to-ColorHug-for-trademark-re.patch
 URL:		http://hughski.com/
 BuildRequires:	colord-devel >= 0.1.31
 BuildRequires:	colord-gtk-devel >= 0.1.24
@@ -87,8 +95,20 @@ Bashowe uzupełnianie składni dla poleceń terminalowych ColorHuga.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
+%patch4 -p1
+%patch5 -p1
+%patch6 -p1
+%patch7 -p1
 
 %build
+%{__aclocal} -I m4
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure \
 	--disable-silent-rules
 %{__make}

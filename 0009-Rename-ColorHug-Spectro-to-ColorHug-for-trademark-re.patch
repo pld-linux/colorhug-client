@@ -1,0 +1,994 @@
+From f971b635f5d27cdffaf19821910a4ece7b38267a Mon Sep 17 00:00:00 2001
+From: Richard Hughes <richard@hughsie.com>
+Date: Fri, 17 Jan 2014 19:43:22 +0000
+Subject: [PATCH 09/11] Rename 'ColorHug Spectro' to 'ColorHug+' for trademark
+ reasons
+
+---
+ data/ch-spectro-util.ui               |  2 +-
+ data/colorhug-spectro-util.desktop.in |  4 ++--
+ po/cs_CZ.po                           |  6 +++---
+ po/da.po                              |  6 +++---
+ po/de.po                              |  6 +++---
+ po/de_DE.po                           | 10 +++++-----
+ po/el_GR.po                           |  6 +++---
+ po/en_GB.po                           | 12 ++++++------
+ po/en_US.po                           | 12 ++++++------
+ po/es_ES.po                           |  6 +++---
+ po/et.po                              |  6 +++---
+ po/fa.po                              |  6 +++---
+ po/fi.po                              |  6 +++---
+ po/fr_FR.po                           | 12 ++++++------
+ po/hu.po                              | 12 ++++++------
+ po/it_IT.po                           |  6 +++---
+ po/ja_JP.po                           |  6 +++---
+ po/lv.po                              | 12 ++++++------
+ po/nb.po                              |  6 +++---
+ po/nl_NL.po                           |  6 +++---
+ po/nn.po                              | 12 ++++++------
+ po/pl.po                              |  6 +++---
+ po/pt.po                              |  6 +++---
+ po/pt_BR.po                           |  8 ++++----
+ po/pt_PT.po                           |  6 +++---
+ po/ro.po                              |  6 +++---
+ po/ru.po                              |  6 +++---
+ po/sv.po                              |  6 +++---
+ po/tr.po                              | 12 ++++++------
+ po/uk.po                              | 10 +++++-----
+ po/zh_TW.po                           | 12 ++++++------
+ src/ch-ccmx.c                         |  6 +++---
+ src/ch-flash.c                        |  8 ++++----
+ src/ch-spectro-util.c                 |  4 ++--
+ 34 files changed, 128 insertions(+), 128 deletions(-)
+
+--- a/data/ch-spectro-util.ui
++++ b/data/ch-spectro-util.ui
+@@ -11,7 +11,7 @@
+   <object class="GtkDialog" id="dialog_util">
+     <property name="can_focus">False</property>
+     <property name="border_width">12</property>
+-    <property name="title" translatable="yes">ColorHug Spectro Utility</property>
++    <property name="title" translatable="yes">ColorHug+ Utility</property>
+     <property name="resizable">False</property>
+     <property name="type_hint">dialog</property>
+     <property name="deletable">False</property>
+--- a/data/colorhug-spectro-util.desktop.in
++++ b/data/colorhug-spectro-util.desktop.in
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+-_Name=ColorHug Spectro Utility
+-_Comment=Play with the ColorHug Spectro
++_Name=ColorHug+ Utility
++_Comment=Play with the ColorHug+
+ Icon=colorhug-spectro-util
+ Exec=colorhug-spectro-util %F
+ Terminal=false
+--- a/po/cs_CZ.po
++++ b/po/cs_CZ.po
+@@ -101,7 +101,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Nevypínejte ani neodpojujte zařízení od počítače."
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -188,7 +188,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Aktualizuj firmware na ColorHug kolorimetru"
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -509,7 +509,7 @@
+ msgstr "Zjištěn ColorHug"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/da.po
++++ b/po/da.po
+@@ -99,7 +99,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Afbryd ikke enheden og sluk ikke computeren"
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -186,7 +186,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Opdater firmware på ColorHug colorimeter"
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -507,7 +507,7 @@
+ msgstr "ColorHug Detekteret"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/de.po
++++ b/po/de.po
+@@ -99,7 +99,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr ""
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -186,7 +186,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Die Firmware des ColorHug updaten"
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -507,7 +507,7 @@
+ msgstr ""
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/de_DE.po
++++ b/po/de_DE.po
+@@ -102,7 +102,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Lassen die das Gerät eingesteckt und schalten Sie den Computer nicht aus."
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -189,8 +189,8 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "ColorHug Kolorimeter Firmware aktualisieren"
+ 
+-msgid "Play with the ColorHug Spectro"
+-msgstr "Spiele mit dem ColorHug Spectro"
++msgid "Play with the ColorHug+"
++msgstr "Spiele mit dem ColorHug+"
+ 
+ msgid "Whether we should update to test firmware"
+ msgstr "Ob wir die Firmware aktualisieren sollten, um sie zu testen."
+@@ -510,8 +510,8 @@
+ msgstr "ColorHug gefunden"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
+-msgstr "ColorHug Spectro gefunden"
++msgid "ColorHug+ Detected"
++msgstr "ColorHug+ gefunden"
+ 
+ #. TRANSLATORS: fake hardware
+ msgid "Emulated ColorHug Detected"
+--- a/po/el_GR.po
++++ b/po/el_GR.po
+@@ -100,7 +100,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr ""
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -187,7 +187,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr ""
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -508,7 +508,7 @@
+ msgstr ""
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/en_GB.po
++++ b/po/en_GB.po
+@@ -99,8 +99,8 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Do not unplug the device and do not turn off the computer."
+ 
+-msgid "ColorHug Spectro Utility"
+-msgstr "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
++msgstr "ColorHug+ Utility"
+ 
+ msgid "Auto update:"
+ msgstr "Auto update:"
+@@ -186,8 +186,8 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Update the firmware on the ColorHug colorimeter"
+ 
+-msgid "Play with the ColorHug Spectro"
+-msgstr "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
++msgstr "Play with the ColorHug+"
+ 
+ msgid "Whether we should update to test firmware"
+ msgstr "Whether we should update to test firmware"
+@@ -507,8 +507,8 @@
+ msgstr "ColorHug Detected"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
+-msgstr "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
++msgstr "ColorHug+ Detected"
+ 
+ #. TRANSLATORS: fake hardware
+ msgid "Emulated ColorHug Detected"
+--- a/po/en_US.po
++++ b/po/en_US.po
+@@ -98,8 +98,8 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Do not unplug the device and do not turn off the computer."
+ 
+-msgid "ColorHug Spectro Utility"
+-msgstr "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
++msgstr "ColorHug+ Utility"
+ 
+ msgid "Auto update:"
+ msgstr "Auto update:"
+@@ -185,8 +185,8 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Update the firmware on the ColorHug colorimeter"
+ 
+-msgid "Play with the ColorHug Spectro"
+-msgstr "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
++msgstr "Play with the ColorHug+"
+ 
+ msgid "Whether we should update to test firmware"
+ msgstr "Whether we should update to test firmware"
+@@ -506,8 +506,8 @@
+ msgstr "ColorHug Detected"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
+-msgstr "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
++msgstr "ColorHug+ Detected"
+ 
+ #. TRANSLATORS: fake hardware
+ msgid "Emulated ColorHug Detected"
+--- a/po/es_ES.po
++++ b/po/es_ES.po
+@@ -100,7 +100,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "No desconecte el dispositivo y no apague el ordenador."
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -187,7 +187,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Actualizar el firmware del colorímetro ColorHug"
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -508,7 +508,7 @@
+ msgstr "ColorHug detectado"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/et.po
++++ b/po/et.po
+@@ -99,7 +99,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr ""
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -186,7 +186,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr ""
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -507,7 +507,7 @@
+ msgstr ""
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/fa.po
++++ b/po/fa.po
+@@ -98,7 +98,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr ""
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -185,7 +185,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr ""
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -506,7 +506,7 @@
+ msgstr ""
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/fi.po
++++ b/po/fi.po
+@@ -100,7 +100,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Älä irrota laitetta tai sammuta tietokonetta."
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -187,7 +187,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Päivitä ColorHug-värimittarin sisäinen ohjelmisto"
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -508,7 +508,7 @@
+ msgstr "ColorHug havaittu"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/fr_FR.po
++++ b/po/fr_FR.po
+@@ -101,8 +101,8 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Ne pas débrancher l'appareil et ne pas éteindre l'ordinateur."
+ 
+-msgid "ColorHug Spectro Utility"
+-msgstr "Outil ColorHug Spectro"
++msgid "ColorHug+ Utility"
++msgstr "Outil ColorHug+"
+ 
+ msgid "Auto update:"
+ msgstr "Mise à jour automatique:"
+@@ -188,8 +188,8 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Mettre à jour le micrologiciel du colorimètre ColorHug"
+ 
+-msgid "Play with the ColorHug Spectro"
+-msgstr "Jouer avec ColorHug Spectro"
++msgid "Play with the ColorHug+"
++msgstr "Jouer avec ColorHug+"
+ 
+ msgid "Whether we should update to test firmware"
+ msgstr "Option de mise à jour vers un micrologiciel de test"
+@@ -509,8 +509,8 @@
+ msgstr "ColorHug détecté"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
+-msgstr "ColorHug Spectro détecté"
++msgid "ColorHug+ Detected"
++msgstr "ColorHug+ détecté"
+ 
+ #. TRANSLATORS: fake hardware
+ msgid "Emulated ColorHug Detected"
+--- a/po/hu.po
++++ b/po/hu.po
+@@ -99,8 +99,8 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Ne húzza ki és ne kapcsolja ki a számítógépét."
+ 
+-msgid "ColorHug Spectro Utility"
+-msgstr "ColorHug Spectro kisalkalmazás"
++msgid "ColorHug+ Utility"
++msgstr "ColorHug+ kisalkalmazás"
+ 
+ msgid "Auto update:"
+ msgstr "Automatikus frissítés:"
+@@ -186,8 +186,8 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Frissítse a firmware-t a ColorHug koloriméteren"
+ 
+-msgid "Play with the ColorHug Spectro"
+-msgstr "játék a ColorHug Spectro-val"
++msgid "Play with the ColorHug+"
++msgstr "játék a ColorHug+-val"
+ 
+ msgid "Whether we should update to test firmware"
+ msgstr "Mindenképp frissítenie kell, hogy tesztelni tudja a firmware-t"
+@@ -507,8 +507,8 @@
+ msgstr "ColorHug észlelve"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
+-msgstr "ColorHug Spectro észlelve"
++msgid "ColorHug+ Detected"
++msgstr "ColorHug+ észlelve"
+ 
+ #. TRANSLATORS: fake hardware
+ msgid "Emulated ColorHug Detected"
+--- a/po/it_IT.po
++++ b/po/it_IT.po
+@@ -99,7 +99,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Non scollegare il dispositivo e non spegnere il computer."
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr "Utilità spettro ColorHug"
+ 
+ msgid "Auto update:"
+@@ -186,7 +186,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Aggiorna il firmware nel colorimetro ColorHug"
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -507,7 +507,7 @@
+ msgstr "ColorHug rilevato"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/ja_JP.po
++++ b/po/ja_JP.po
+@@ -100,7 +100,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "注意！でバイスを抜いたりコンピュタの電源を切ったりするべからず"
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -187,7 +187,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "ファームウェア バジョンを最新する"
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -508,7 +508,7 @@
+ msgstr "ファームウェア一覧の容量は０です"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/lv.po
++++ b/po/lv.po
+@@ -99,8 +99,8 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Neatvienojiet ierīci un neizslēdziet datoru."
+ 
+-msgid "ColorHug Spectro Utility"
+-msgstr "ColorHug Spectro utilīta"
++msgid "ColorHug+ Utility"
++msgstr "ColorHug+ utilīta"
+ 
+ msgid "Auto update:"
+ msgstr "Automātiski atjaunināt:"
+@@ -186,8 +186,8 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Atjaunināt aparātprogrammatūru uz ColorHug krāsu mērītāja"
+ 
+-msgid "Play with the ColorHug Spectro"
+-msgstr "Spēlēties ar ColorHug Spectro"
++msgid "Play with the ColorHug+"
++msgstr "Spēlēties ar ColorHug+"
+ 
+ msgid "Whether we should update to test firmware"
+ msgstr "Vai vajadzētu atjaunināt uz testa aparātprogrammatūru"
+@@ -507,8 +507,8 @@
+ msgstr "Atrasts ColorHug"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
+-msgstr "Ir atklāts ColorHug Spectro"
++msgid "ColorHug+ Detected"
++msgstr "Ir atklāts ColorHug+"
+ 
+ #. TRANSLATORS: fake hardware
+ msgid "Emulated ColorHug Detected"
+--- a/po/nb.po
++++ b/po/nb.po
+@@ -100,7 +100,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "La enheten være koblet til og datamaskinen være påslått."
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -187,7 +187,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Oppdater firmwaren på Colorhug-kolorimeteret"
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -508,7 +508,7 @@
+ msgstr "Colorhug funnet"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/nl_NL.po
++++ b/po/nl_NL.po
+@@ -99,7 +99,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Verbreek de verbinding met het apparaat niet en zet de computer niet uit."
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -186,7 +186,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Werk de firmware van de ColorHug colorimeter bij"
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -507,7 +507,7 @@
+ msgstr "ColorHug gedetecteerd"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/nn.po
++++ b/po/nn.po
+@@ -101,8 +101,8 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "La eininga vera kopla til og datamaskinen vera påslått."
+ 
+-msgid "ColorHug Spectro Utility"
+-msgstr "ColorHug Spectro-verktøy"
++msgid "ColorHug+ Utility"
++msgstr "ColorHug+-verktøy"
+ 
+ msgid "Auto update:"
+ msgstr "Autooppdater:"
+@@ -188,8 +188,8 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Oppdater fastvaren på ColorHug-kolorimeteret"
+ 
+-msgid "Play with the ColorHug Spectro"
+-msgstr "Leik med ColorHug Spectro"
++msgid "Play with the ColorHug+"
++msgstr "Leik med ColorHug+"
+ 
+ msgid "Whether we should update to test firmware"
+ msgstr "Om me skal oppdatera til testfastvaren"
+@@ -509,8 +509,8 @@
+ msgstr "ColorHug oppdaga"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
+-msgstr "ColorHug Spectro oppdaga"
++msgid "ColorHug+ Detected"
++msgstr "ColorHug+ oppdaga"
+ 
+ #. TRANSLATORS: fake hardware
+ msgid "Emulated ColorHug Detected"
+--- a/po/pl.po
++++ b/po/pl.po
+@@ -100,7 +100,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Nie należy odłączać urządzenia ani wyłączać komputera."
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr "Narzędzie spektrometrii ColorHug"
+ 
+ msgid "Auto update:"
+@@ -187,7 +187,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Aktualizuje oprogramowanie sprzętowe kolorymetru ColorHug"
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr "Zabawa ze spektrometrią ColorHug"
+ 
+ msgid "Whether we should update to test firmware"
+@@ -508,7 +508,7 @@
+ msgstr "Wykryto urządzenie ColorHug"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr "Wykryto spektrometrię ColorHug"
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/pt_BR.po
++++ b/po/pt_BR.po
+@@ -100,7 +100,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Não remova o dispositivo e não desligue o computador."
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr "Utilitário ColoHug Spectro"
+ 
+ msgid "Auto update:"
+@@ -187,8 +187,8 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Atualizar o firmware no colorímetro do ColorHug"
+ 
+-msgid "Play with the ColorHug Spectro"
+-msgstr "Jogar com o ColorHug Spectro"
++msgid "Play with the ColorHug+"
++msgstr "Jogar com o ColorHug+"
+ 
+ msgid "Whether we should update to test firmware"
+ msgstr "Quando se deve fazer upgrade para firmware de teste"
+@@ -508,7 +508,7 @@
+ msgstr "ColorHug Detectado"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr "Espectro ColorHug detectado"
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/pt_PT.po
++++ b/po/pt_PT.po
+@@ -98,7 +98,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr ""
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -185,7 +185,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr ""
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -506,7 +506,7 @@
+ msgstr ""
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/ro.po
++++ b/po/ro.po
+@@ -99,7 +99,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Nu deconectați dispozitivul și nu opriți computerul."
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -186,7 +186,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Actualizarea firmware-ului de pe colorimetrul ColorHug"
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -507,7 +507,7 @@
+ msgstr "Detectat ColorHug"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/ru.po
++++ b/po/ru.po
+@@ -100,7 +100,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Не отключайте устройство и\nне выключайте компьютер."
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -187,7 +187,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Обновить прошивку в колориметре ColorHug"
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -508,7 +508,7 @@
+ msgstr "Обнаружен ColorHug"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/sv.po
++++ b/po/sv.po
+@@ -98,7 +98,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Koppla inte ur enheten och stäng inte av datorn."
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr ""
+ 
+ msgid "Auto update:"
+@@ -185,7 +185,7 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Uppdatera mjukvaran på ColorHug färgometern"
+ 
+-msgid "Play with the ColorHug Spectro"
++msgid "Play with the ColorHug+"
+ msgstr ""
+ 
+ msgid "Whether we should update to test firmware"
+@@ -506,7 +506,7 @@
+ msgstr "ColorHug Detekterad"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
++msgid "ColorHug+ Detected"
+ msgstr ""
+ 
+ #. TRANSLATORS: fake hardware
+--- a/po/tr.po
++++ b/po/tr.po
+@@ -99,8 +99,8 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Cihazı çıkarmayın ve bilgisayarı kapatmayınız."
+ 
+-msgid "ColorHug Spectro Utility"
+-msgstr "ColorHug Spectro Aracı"
++msgid "ColorHug+ Utility"
++msgstr "ColorHug+ Aracı"
+ 
+ msgid "Auto update:"
+ msgstr "Otomatik Güncelleme"
+@@ -186,8 +186,8 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "ColorHug Renkmetre yazılımını güncelle"
+ 
+-msgid "Play with the ColorHug Spectro"
+-msgstr "ColorHug Spectro ile oynayın"
++msgid "Play with the ColorHug+"
++msgstr "ColorHug+ ile oynayın"
+ 
+ msgid "Whether we should update to test firmware"
+ msgstr "Biz test yazılımı güncellemesi varsa günceller yada yoksa güncelleme yapılmaz."
+@@ -507,8 +507,8 @@
+ msgstr "Colorhug tespit Edildi."
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
+-msgstr "ColorHug Spectro Algılandı"
++msgid "ColorHug+ Detected"
++msgstr "ColorHug+ Algılandı"
+ 
+ #. TRANSLATORS: fake hardware
+ msgid "Emulated ColorHug Detected"
+--- a/po/uk.po
++++ b/po/uk.po
+@@ -99,7 +99,7 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "Не від’єднуйте пристрій від комп’ютера і не вимикайте комп’ютер."
+ 
+-msgid "ColorHug Spectro Utility"
++msgid "ColorHug+ Utility"
+ msgstr "Службова програма Spectro ColorHug"
+ 
+ msgid "Auto update:"
+@@ -186,8 +186,8 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "Оновлює мікропрограму на колориметрі ColorHug"
+ 
+-msgid "Play with the ColorHug Spectro"
+-msgstr "Погратися з ColorHug Spectro"
++msgid "Play with the ColorHug+"
++msgstr "Погратися з ColorHug+"
+ 
+ msgid "Whether we should update to test firmware"
+ msgstr "Чи слід виконувати оновлення для перевірки мікрокоду"
+@@ -507,8 +507,8 @@
+ msgstr "Виявлено ColorHug"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
+-msgstr "Виявлено ColorHug Spectro"
++msgid "ColorHug+ Detected"
++msgstr "Виявлено ColorHug+"
+ 
+ #. TRANSLATORS: fake hardware
+ msgid "Emulated ColorHug Detected"
+--- a/po/zh_TW.po
++++ b/po/zh_TW.po
+@@ -99,8 +99,8 @@
+ msgid "Do not unplug the device and do not turn off the computer."
+ msgstr "請不要拔除裝置，也不要關閉電腦。"
+ 
+-msgid "ColorHug Spectro Utility"
+-msgstr "ColorHug Spectro 公用程式"
++msgid "ColorHug+ Utility"
++msgstr "ColorHug+ 公用程式"
+ 
+ msgid "Auto update:"
+ msgstr "自動更新："
+@@ -186,8 +186,8 @@
+ msgid "Update the firmware on the ColorHug colorimeter"
+ msgstr "更新 ColorHug 色度計上的韌體"
+ 
+-msgid "Play with the ColorHug Spectro"
+-msgstr "把玩 ColorHug Spectro"
++msgid "Play with the ColorHug+"
++msgstr "把玩 ColorHug+"
+ 
+ msgid "Whether we should update to test firmware"
+ msgstr "是否應更新至測試用韌體"
+@@ -507,8 +507,8 @@
+ msgstr "偵測到 ColorHug"
+ 
+ #. TRANSLATORS: first release hardware
+-msgid "ColorHug Spectro Detected"
+-msgstr "偵測到 ColorHug Spectro"
++msgid "ColorHug+ Detected"
++msgstr "偵測到 ColorHug+"
+ 
+ #. TRANSLATORS: fake hardware
+ msgid "Emulated ColorHug Detected"
+--- a/src/ch-ccmx.c
++++ b/src/ch-ccmx.c
+@@ -510,9 +510,9 @@
+ 	case CH_DEVICE_MODE_FIRMWARE:
+ 		str = "colorhug";
+ 		break;
+-	case CH_DEVICE_MODE_BOOTLOADER_SPECTRO:
+-	case CH_DEVICE_MODE_FIRMWARE_SPECTRO:
+-		str = "colorhug-spectro";
++	case CH_DEVICE_MODE_BOOTLOADER_PLUS:
++	case CH_DEVICE_MODE_FIRMWARE_PLUS:
++		str = "colorhug-plus";
+ 		break;
+ 	default:
+ 		str = "unknown";
+--- a/src/ch-flash.c
++++ b/src/ch-flash.c
+@@ -721,9 +721,9 @@
+ 	case CH_DEVICE_MODE_FIRMWARE:
+ 		str = "colorhug";
+ 		break;
+-	case CH_DEVICE_MODE_BOOTLOADER_SPECTRO:
+-	case CH_DEVICE_MODE_FIRMWARE_SPECTRO:
+-		str = "colorhug-spectro";
++	case CH_DEVICE_MODE_BOOTLOADER_PLUS:
++	case CH_DEVICE_MODE_FIRMWARE_PLUS:
++		str = "colorhug-plus";
+ 		break;
+ 	default:
+ 		str = "unknown";
+@@ -1035,7 +1035,7 @@
+ 		break;
+ 	case 0x02:
+ 		/* TRANSLATORS: first release hardware */
+-		str = g_strdup (_("ColorHug Spectro Detected"));
++		str = g_strdup (_("ColorHug+ Detected"));
+ 		break;
+ 	case 0xff:
+ 		/* TRANSLATORS: fake hardware */
+--- a/src/ch-spectro-util.c
++++ b/src/ch-spectro-util.c
+@@ -476,7 +476,7 @@
+ 	g_debug ("Added: %i:%i",
+ 		 g_usb_device_get_vid (device),
+ 		 g_usb_device_get_pid (device));
+-	if (ch_device_get_mode (device) == CH_DEVICE_MODE_FIRMWARE_SPECTRO) {
++	if (ch_device_get_mode (device) == CH_DEVICE_MODE_FIRMWARE_PLUS) {
+ 		priv->device = g_object_ref (device);
+ 		ch_util_got_device (priv);
+ 	}
+@@ -493,7 +493,7 @@
+ 	g_debug ("Removed: %i:%i",
+ 		 g_usb_device_get_vid (device),
+ 		 g_usb_device_get_pid (device));
+-	if (ch_device_get_mode (device) == CH_DEVICE_MODE_FIRMWARE_SPECTRO) {
++	if (ch_device_get_mode (device) == CH_DEVICE_MODE_FIRMWARE_PLUS) {
+ 		if (priv->device != NULL)
+ 			g_object_unref (priv->device);
+ 		priv->device = NULL;
