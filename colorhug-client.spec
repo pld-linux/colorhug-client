@@ -1,28 +1,20 @@
 Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
-Version:	0.2.1
-Release:	2
+Version:	0.2.2
+Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	2f54a15b354cd39d8b58572e9899fd88
-Patch0:		0002-Fix-autogen-failure-with-new-gettexts.patch
-Patch1:		0003-Do-not-use-deprecated-widgets-in-the-spectro-tool.patch
-Patch2:		0004-Load-the-colorhug-spectro-utils-data-file-from-a-GRe.patch
-Patch3:		0005-trivial-Fix-thinko-when-ColorHug-1-and-2-are-connect.patch
-Patch4:		0006-trivial-remove-some-cruft-in-the-configure-file.patch
-Patch5:		0007-Support-getting-and-setting-the-DAC-value-on-hardwar.patch
-Patch6:		0008-trivial-Only-use-the-latest-released-GTK-version.patch
-Patch7:		0009-Rename-ColorHug-Spectro-to-ColorHug-for-trademark-re.patch
+# Source0-md5:	cc3a1885c1618cc991c9de7e2849bd4d
 URL:		http://hughski.com/
-BuildRequires:	colord-devel >= 0.1.31
+BuildRequires:	colord-devel >= 1.2.3
 BuildRequires:	colord-gtk-devel >= 0.1.24
 BuildRequires:	docbook-utils
 BuildRequires:	gettext-devel >= 0.17
 BuildRequires:	glib2-devel >= 1:2.31.10
 BuildRequires:	gobject-introspection-devel >= 0.9.8
-BuildRequires:	gtk+3-devel >= 3.0.0
+BuildRequires:	gtk+3-devel >= 3.11.2
 BuildRequires:	intltool >= 0.50.0
 BuildRequires:	lcms2-devel
 BuildRequires:	libcanberra-gtk3-devel >= 0.10
@@ -32,7 +24,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	sqlite3-devel
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-Requires:	colord-libs >= 0.1.31
+Requires:	colord-libs >= 1.2.3
 Requires:	glib2 >= 1:2.31.10
 Requires:	libgusb >= 0.1.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -61,7 +53,7 @@ Summary(pl.UTF-8):	Graficzne narzędzia do kolorymetrów Hughski
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 Requires:	colord-gtk >= 0.1.24
-Requires:	gtk+3 >= 3.0.0
+Requires:	gtk+3 >= 3.11.2
 Requires:	libcanberra-gtk3 >= 0.10
 
 %description gui
@@ -95,14 +87,6 @@ Bashowe uzupełnianie składni dla poleceń terminalowych ColorHuga.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
-%patch6 -p1
-%patch7 -p1
 
 %build
 %{__aclocal} -I m4
@@ -129,10 +113,11 @@ mv $RPM_BUILD_ROOT%{_localedir}/{fr_FR,fr}
 mv $RPM_BUILD_ROOT%{_localedir}/{it_IT,it}
 mv $RPM_BUILD_ROOT%{_localedir}/{ja_JP,ja}
 mv $RPM_BUILD_ROOT%{_localedir}/{nl_NL,nl}
-mv $RPM_BUILD_ROOT%{_localedir}/{pt_PT,pt}
 # empty version of pl which already exists
 %{__rm} -r $RPM_BUILD_ROOT%{_localedir}/pl_PL
-# program not packaged (unfinished as of 0.1.13)
+# just a copy of pt (only header differs)
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/pt_PT
+# program not packaged (unfinished as of 0.2.2)
 %{__rm} $RPM_BUILD_ROOT%{_desktopdir}/colorhug-spectro-util.desktop
 
 %find_lang %{name}
