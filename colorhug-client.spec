@@ -1,14 +1,14 @@
 Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
-Version:	0.2.2
+Version:	0.2.3
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	cc3a1885c1618cc991c9de7e2849bd4d
+# Source0-md5:	578ad9e628e3bfeaecbf5d9988580641
 URL:		http://hughski.com/
-BuildRequires:	colord-devel >= 1.2.3
+BuildRequires:	colord-devel >= 1.2.4
 BuildRequires:	colord-gtk-devel >= 0.1.24
 BuildRequires:	docbook-utils
 BuildRequires:	gettext-devel >= 0.17
@@ -24,7 +24,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	sqlite3-devel
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-Requires:	colord-libs >= 1.2.3
+Requires:	colord-libs >= 1.2.4
 Requires:	glib2 >= 1:2.31.10
 Requires:	libgusb >= 0.1.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -103,9 +103,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-# remove empty de locale
-%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/de
 mv $RPM_BUILD_ROOT%{_localedir}/{cs_CZ,cs}
+# replace de with more complete version from de_DE
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/de
 mv $RPM_BUILD_ROOT%{_localedir}/{de_DE,de}
 mv $RPM_BUILD_ROOT%{_localedir}/{el_GR,el}
 mv $RPM_BUILD_ROOT%{_localedir}/{es_ES,es}
@@ -117,7 +117,7 @@ mv $RPM_BUILD_ROOT%{_localedir}/{nl_NL,nl}
 %{__rm} -r $RPM_BUILD_ROOT%{_localedir}/pl_PL
 # just a copy of pt (only header differs)
 %{__rm} -r $RPM_BUILD_ROOT%{_localedir}/pt_PT
-# program not packaged (unfinished as of 0.2.2)
+# program not packaged (unfinished as of 0.2.3)
 %{__rm} $RPM_BUILD_ROOT%{_desktopdir}/colorhug-spectro-util.desktop
 
 %find_lang %{name}
