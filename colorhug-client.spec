@@ -1,12 +1,12 @@
 Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
-Version:	0.2.3
+Version:	0.2.4
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	578ad9e628e3bfeaecbf5d9988580641
+# Source0-md5:	9c1d91b3516562abb8a23520b2b41eb8
 URL:		http://hughski.com/
 BuildRequires:	colord-devel >= 1.2.4
 BuildRequires:	colord-gtk-devel >= 0.1.24
@@ -18,7 +18,7 @@ BuildRequires:	gtk+3-devel >= 3.11.2
 BuildRequires:	intltool >= 0.50.0
 BuildRequires:	lcms2-devel
 BuildRequires:	libcanberra-gtk3-devel >= 0.10
-BuildRequires:	libgusb-devel >= 0.1.4
+BuildRequires:	libgusb-devel >= 0.2.2
 BuildRequires:	libsoup-devel >= 2.4
 BuildRequires:	pkgconfig
 BuildRequires:	sqlite3-devel
@@ -26,7 +26,7 @@ BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	colord-libs >= 1.2.4
 Requires:	glib2 >= 1:2.31.10
-Requires:	libgusb >= 0.1.4
+Requires:	libgusb >= 0.2.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # why programs are installed to libexecdir in the first place?
@@ -117,8 +117,6 @@ mv $RPM_BUILD_ROOT%{_localedir}/{nl_NL,nl}
 %{__rm} -r $RPM_BUILD_ROOT%{_localedir}/pl_PL
 # just a copy of pt (only header differs)
 %{__rm} -r $RPM_BUILD_ROOT%{_localedir}/pt_PT
-# program not packaged (unfinished as of 0.2.3)
-%{__rm} $RPM_BUILD_ROOT%{_desktopdir}/colorhug-spectro-util.desktop
 
 %find_lang %{name}
 
@@ -130,7 +128,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS README
 %attr(755,root,root) %{_bindir}/colorhug
 %attr(755,root,root) %{_bindir}/colorhug-cmd
-%attr(755,root,root) %{_bindir}/colorhug-inhx32-to-bin
 %{_datadir}/glib-2.0/schemas/com.hughski.colorhug-client.gschema.xml
 %{_mandir}/man1/colorhug-cmd.1*
 
@@ -138,13 +135,15 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/colorhug-ccmx
 %attr(755,root,root) %{_bindir}/colorhug-flash
+%attr(755,root,root) %{_bindir}/colorhug-refresh
 %{_datadir}/colorhug-client
-%{_datadir}/appdata/colorhug-ccmx.appdata.xml
-%{_datadir}/appdata/colorhug-flash.appdata.xml
+%{_datadir}/appdata/com.hughski.ColorHug.CcmxLoader.appdata.xml
+%{_datadir}/appdata/com.hughski.ColorHug.FlashLoader.appdata.xml
 %{_datadir}/help/C/colorhug-client
-%{_desktopdir}/colorhug-ccmx.desktop
 %{_desktopdir}/colorhug-docs.desktop
-%{_desktopdir}/colorhug-flash.desktop
+%{_desktopdir}/com.hughski.ColorHug.CcmxLoader.desktop
+%{_desktopdir}/com.hughski.ColorHug.DisplayAnalysis.desktop
+%{_desktopdir}/com.hughski.ColorHug.FlashLoader.desktop
 %{_iconsdir}/hicolor/*/apps/colorhug*.png
 %{_iconsdir}/hicolor/*/apps/colorimeter-colorhug-inactive.png
 %{_iconsdir}/hicolor/scalable/apps/colorhug.svg
