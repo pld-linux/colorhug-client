@@ -1,12 +1,13 @@
 Summary:	Tools for the Hughski Colorimeter
 Summary(pl.UTF-8):	Narzędzia do kolorymetrów Hughski
 Name:		colorhug-client
-Version:	0.2.4
+Version:	0.2.5
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	9c1d91b3516562abb8a23520b2b41eb8
+# Source0-md5:	586f18b7c1f3c1e24919f31548207879
+Patch0:		%{name}-bashcomp.patch
 URL:		http://hughski.com/
 BuildRequires:	colord-devel >= 1.2.4
 BuildRequires:	colord-gtk-devel >= 0.1.24
@@ -74,7 +75,7 @@ sensorem.
 Summary:	Bash completion support for ColorHug console commands
 Summary(pl.UTF-8):	Bashowe uzupełnianie składni dla poleceń terminalowych ColorHuga
 Group:		Applications/Shells
-Requires:	bash-completion
+Requires:	bash-completion >= 2.0
 %if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
 %endif
@@ -87,6 +88,7 @@ Bashowe uzupełnianie składni dla poleceń terminalowych ColorHuga.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal} -I m4
@@ -94,6 +96,7 @@ Bashowe uzupełnianie składni dla poleceń terminalowych ColorHuga.
 %{__autoheader}
 %{__automake}
 %configure \
+	--enable-bash-completion=%{bash_compdir} \
 	--disable-silent-rules
 %{__make}
 
@@ -138,6 +141,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/colorhug-refresh
 %{_datadir}/colorhug-client
 %{_datadir}/appdata/com.hughski.ColorHug.CcmxLoader.appdata.xml
+%{_datadir}/appdata/com.hughski.ColorHug.DisplayAnalysis.appdata.xml
 %{_datadir}/appdata/com.hughski.ColorHug.FlashLoader.appdata.xml
 %{_datadir}/help/C/colorhug-client
 %{_desktopdir}/colorhug-docs.desktop
@@ -149,9 +153,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/scalable/apps/colorhug.svg
 %{_iconsdir}/hicolor/*x*/mimetypes/application-x-ccmx.png*
 %{_iconsdir}/hicolor/scalable/mimetypes/application-x-ccmx.svg
-%{_mandir}/man1/colorhug-flash.1*
 %{_mandir}/man1/colorhug-ccmx.1*
+%{_mandir}/man1/colorhug-flash.1*
+%{_mandir}/man1/colorhug-refresh.1*
 
 %files -n bash-completion-colorhug
 %defattr(644,root,root,755)
-/etc/bash_completion.d/colorhug-cmd-completion.bash
+%{bash_compdir}/colorhug-cmd
