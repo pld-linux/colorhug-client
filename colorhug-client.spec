@@ -12,7 +12,7 @@ URL:		http://hughski.com/
 BuildRequires:	colord-devel >= 1.2.4
 BuildRequires:	colord-gtk-devel >= 0.1.24
 BuildRequires:	docbook-utils
-BuildRequires:	gettext-devel >= 0.17
+BuildRequires:	gettext-tools >= 0.17
 BuildRequires:	glib2-devel >= 1:2.31.10
 BuildRequires:	gobject-introspection-devel >= 0.9.8
 BuildRequires:	gtk+3-devel >= 3.11.2
