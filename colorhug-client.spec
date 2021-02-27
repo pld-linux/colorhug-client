@@ -77,9 +77,7 @@ Summary:	Bash completion support for ColorHug console commands
 Summary(pl.UTF-8):	Bashowe uzupełnianie składni dla poleceń terminalowych ColorHuga
 Group:		Applications/Shells
 Requires:	bash-completion >= 2.0
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description -n bash-completion-colorhug
 Bash completion support for ColorHug console commands.
